@@ -438,29 +438,33 @@ $(function(){
 </div>
 
 <div class="reservation_page" id="page_2" style="display: none;">
-  <h3 style="text-align:center;">Persons: </h3>
-      	<div class="table" style="position:relative;">
-          <div class="row">
-              <div class="cell button" onclick="selectetNumber(this)" id="1">1</div>
-              <div class="cell button" onclick="selectetNumber(this)" id="2">2</div>
-              <div class="cell button" onclick="selectetNumber(this)" id="3">3</div>
-          </div>
-          <div class="row">
-              <div class="cell button" onclick="selectetNumber(this)" id="4">4</div>
-              <div class="cell button" onclick="selectetNumber(this)" id="5">5</div>
-              <div class="cell button" onclick="selectetNumber(this)" id="6">6</div>
-          </div>
-          <div class="row">
-              <div class="cell button" onclick="selectetNumber(this)" id="7">7</div>
-              <div class="cell button" onclick="selectetNumber(this)" id="8">8</div>
-              <div class="cell button" onclick="selectetNumber(this)" id="9">9</div>
-          </div>
+  <div class="table-wraperino">
+    <div>
+      <h3 style="text-align:center;">Persons: </h3>
+    </div>
+    	<div class="table">
+        <div class="row">
+            <div class="cell button" onclick="selectetNumber(this)" id="1">1</div>
+            <div class="cell button" onclick="selectetNumber(this)" id="2">2</div>
+            <div class="cell button" onclick="selectetNumber(this)" id="3">3</div>
         </div>
+        <div class="row">
+            <div class="cell button" onclick="selectetNumber(this)" id="4">4</div>
+            <div class="cell button" onclick="selectetNumber(this)" id="5">5</div>
+            <div class="cell button" onclick="selectetNumber(this)" id="6">6</div>
+        </div>
+        <div class="row">
+            <div class="cell button" onclick="selectetNumber(this)" id="7">7</div>
+            <div class="cell button" onclick="selectetNumber(this)" id="8">8</div>
+            <div class="cell button" onclick="selectetNumber(this)" id="9">9</div>
+        </div>
+      </div>
+    </div>
 </div>
 
 <div class="reservation_page" id="page_3" style="display: none;">
   <div class="wraperino">
-  <h3 style="text-align:center">Additional Options</h3>
+  <h3 style="text-align:center;">Additional Options</h3>
     <table class="w3-table w3-striped w3-bordered">
       <form>
           <th><label for="smoking">Smoking</label></th>
