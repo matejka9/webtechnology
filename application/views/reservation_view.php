@@ -127,9 +127,9 @@ function renameSuhrn(){
   if (!nearWindow && !isSmoking && !sitAlone){
     sprava = "You have not selected any additional options.";
   }
-  var formatted = $.datepicker.formatDate("M d, yy", datum);
-  
-  renameObject($('#date2'), null, null, formatted);
+
+
+  renameObject($('#date2'), null, null, datum);
   renameObject($('#number2'),null,null, numberOfPersons);
   renameObject($('#time2'),null,null, cas);
   renameObject($('#addOpt2'),null,null, sprava);
@@ -204,7 +204,7 @@ function everythingIsGood(){
       name = $('#name').val();
       console.log(name);
       if (!name || name == "") {
-        window.alert("Choose name for order");
+        openModal('Name', 'Please write down name for reservation.');
         return false;
     }
     case 2:
@@ -222,8 +222,13 @@ function everythingIsGood(){
       console.log(datum);
       console.log(cas);
       if (!cas || !datum) {
+        openModal('Date and Time', 'Please select date and time for your reservation.');
         return false;
       }
+      var a = cas.split(':'); // split it at the colons
+      var milisec = (+a[0]) * 60 * 60 * 1000 + (+a[1]) * 60 * 1000;
+      cas = milisec;
+      console.log(cas);
     default:
       return true;
   }
@@ -236,23 +241,25 @@ function adaptLayout(next){
     adaptLayoutBack();
   }
   if (iteration == 0) {
-    $("#back").hide();
-    $("#help-box").show();
+    $("#back").css('visibility', 'hidden');
   }else {
-    $("#help-box").hide();
+    $("#back").css('visibility', 'visible');
   }
 }
 
 function adaptLayoutNext(){
   switch (iteration) {
       case 3:
-        $("#page_4").slideDown(700);
+        $("#page_4").show();
+        break;
       case 2:
-        $("#page_3").slideDown(700);
+        $("#page_3").show();
+        break;
       case 1:
-        $("#page_2").slideDown(700);
+        $("#page_2").show();
+        break;
       case 0:
-        $("#page_1").slideDown(700);
+        $("#page_1").show();
         $("footer").show();
         $(".box").show();
         $("#loading").hide();
@@ -264,15 +271,15 @@ function adaptLayoutNext(){
         $("#page_5").hide();
         $("footer").hide();
         $(".box").hide();
-        $("#page_4").slideUp(700);
-        $("#loading").slideDown(700);
+        $("#page_4").hide();
+        $("#loading").show();
         reserveTable(true);
         break;
       case 5:
-        $("#loading").slideUp(700);
-        $("#page_5").slideDown(700);
-        $(".box").slideDown(700);
-        $("footer").slideDown(700);
+        $("#loading").hide();
+        $("#page_5").show();
+        $(".box").show();
+        $("footer").show();
         break;
       default:
         break;
@@ -336,13 +343,10 @@ var name;
 var reservationTableId;
 
 function reserveTable(next){
-  var a = cas.split(':'); // split it at the colons
-  var milisec = (+a[0]) * 60 * 60 * 1000 + (+a[1]) * 60 * 1000;
-  console.log(milisec);
   $.ajax({
         type:"POST",
-        url: next? "<?php echo base_url(); ?>index.php/reservation/rezervuj" : "<?php echo base_url(); ?>index.php/reservation/zrusRezervaciu",
-        data: next? {"numberOfPersons": numberOfPersons, "datum": datum.getTime(), "cas": milisec, "nearWindow": nearWindow, "isSmoking": isSmoking, "sitAlone": sitAlone, "name" : name} : {"reservationTableId" : reservationTableId},
+        url: next? "<?php echo base_url(); ?>reservation/rezervuj" : "<?php echo base_url(); ?>reservation/zrusRezervaciu",
+        data: next? {"numberOfPersons": numberOfPersons, "datum": datum, "cas": cas, "nearWindow": nearWindow, "isSmoking": isSmoking, "sitAlone": sitAlone, "name" : name} : {"reservationTableId" : reservationTableId},
 
         success:function (data) {
           if (data){
@@ -360,8 +364,32 @@ function reserveTable(next){
     });
 }
 
+//Showing response
+(function ($) {
+    "use strict";
+    function centerModal() {
+        $(this).css('display', 'block');
+        var $dialog  = $(this).find(".modal-dialog"),
+        offset       = ($(window).height() - $dialog.height()) / 2,
+        bottomMargin = parseInt($dialog.css('marginBottom'), 10);
 
+        // Make sure you don't hide the top part of the modal w/ a negative margin if it's longer than the screen height, and keep the margin equal to the bottom margin of the modal
+        if(offset < bottomMargin) offset = bottomMargin;
+        $dialog.css("margin-top", offset);
+    }
 
+    $(document).on('show.bs.modal', '.modal', centerModal);
+    $(window).on("resize", function () {
+        $('.modal:visible').each(centerModal);
+    });
+}(jQuery));
+
+function openModal(title, body){
+  $('#exampleModal').modal();
+
+  $('#modelTitle').text(title);
+  $('#modelBody').text(body);
+}
 //Start up
 
 $(function(){
@@ -375,7 +403,7 @@ $(function(){
     startDate: new Date(),
     endDate: date
   }).on('changeDate', function(e){
-    datum = e.date;
+    datum = e.date.getTime();
   });
 
   $('#time').bootstrapMaterialDatePicker({ date: false , format : 'HH:mm'});
@@ -487,27 +515,16 @@ $(function(){
   </div>
 </div>
 
-
-
-
-
-
-
 <div class="button-slide">
   <div class="box">
   </div>
 
-  <div class="box" id='help-box'>
-  </div>
-
-  <!-- <div class="round-div button left button-nav" onclick="goBack();" id="back" style="display: none;"> -->
-  <div class="round-div button button-nav box" onclick="goBack();" id="back" style="display: none;">  
+  <div class="round-div button button-nav box" onclick="goBack();" id="back" style="visibility : hidden;">  
       <span style="display: block;">
           Back
       </span>
   </div>
-
-  <!--  <div class="round-div" id="center-div"> -->
+  
   <div class="round-div box">
     <span style="display: block;" id="step">
           Krok
@@ -522,5 +539,20 @@ $(function(){
 
   <div class="box">
   </div>
-
 </div>
+
+<div class="modal fade bdax-example-modal-sm" id="exampleModal">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title" id="modelTitle">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        <p id="modelBody">One fine body&hellip;</p>
+      </div>
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -112,7 +112,7 @@ body{
     /*min-height: calc(100% - 25px);*/
 
     margin-bottom: 25px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 
@@ -122,6 +122,11 @@ body{
     width: 100%;
     margin: 0px auto;
     position: relative;
+}
+
+.box {
+    display: inline-block;
+    top: 0px;*
 }
 
 .round-div {
@@ -154,10 +159,7 @@ body{
     left: 20%;
 }
 
-.box {
-    display: inline-block;
-    top: 0px;
-}
+
 
 #help-box {
     width: 9%;
@@ -201,6 +203,10 @@ body{
     height:33%;
     border:1px solid #CCC;
     vertical-align: middle;
+}
+
+body.modal-open {
+    overflow: visible;
 }
 
 h1{
