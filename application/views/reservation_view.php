@@ -129,7 +129,7 @@ function renameSuhrn(){
   }
 
 
-  renameObject($('#date2'), null, null, datum);
+  renameObject($('#date2'), null, null, $.datepicker.formatDate('dd M yy', datum));
   renameObject($('#number2'),null,null, numberOfPersons);
   renameObject($('#time2'),null,null, cas);
   renameObject($('#addOpt2'),null,null, sprava);
@@ -225,10 +225,6 @@ function everythingIsGood(){
         openModal('Date and Time', 'Please select date and time for your reservation.');
         return false;
       }
-      var a = cas.split(':'); // split it at the colons
-      var milisec = (+a[0]) * 60 * 60 * 1000 + (+a[1]) * 60 * 1000;
-      cas = milisec;
-      console.log(cas);
     default:
       return true;
   }
@@ -342,11 +338,13 @@ var name;
 //Reservation
 var reservationTableId;
 
-function reserveTable(next){
+function reserveTable(next){a
+  var a = cas.split(':'); // split it at the colons
+  var milisec = (+a[0]) * 60 * 60 * 1000 + (+a[1]) * 60 * 1000;
   $.ajax({
         type:"POST",
-        url: next? "<?php echo base_url(); ?>reservation/rezervuj" : "<?php echo base_url(); ?>reservation/zrusRezervaciu",
-        data: next? {"numberOfPersons": numberOfPersons, "datum": datum, "cas": cas, "nearWindow": nearWindow, "isSmoking": isSmoking, "sitAlone": sitAlone, "name" : name} : {"reservationTableId" : reservationTableId},
+        url: next? "<?php echo base_url(); ?>index.php/reservation/rezervuj" : "<?php echo base_url(); ?>index.php/reservation/zrusRezervaciu",
+        data: next? {"numberOfPersons": numberOfPersons, "datum": datum.getTime(), "cas": milisec, "nearWindow": nearWindow, "isSmoking": isSmoking, "sitAlone": sitAlone, "name" : name} : {"reservationTableId" : reservationTableId},
 
         success:function (data) {
           if (data){
@@ -403,7 +401,7 @@ $(function(){
     startDate: new Date(),
     endDate: date
   }).on('changeDate', function(e){
-    datum = e.date.getTime();
+    datum = e.date;
   });
 
   $('#time').bootstrapMaterialDatePicker({ date: false , format : 'HH:mm'});
