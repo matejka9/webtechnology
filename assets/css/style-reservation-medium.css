@@ -1,11 +1,19 @@
 .reservation_page{
-    min-height: 500px;
+    min-height: 400px;
     position: relative; 
     display: flex;
     justify-content:center;
     align-items:center;
 }
 
+.date-header {
+    text-align:center;
+    padding-bottom: 5%;
+}
+
+.date-own-picker{
+    padding-bottom: 5%;
+}
 /**********
 ***STEP****
 *NAVIGATION
@@ -21,15 +29,15 @@
 
 .box {
     display: inline-block;
-    top: 0px;*
+    top: 0px;
+    width: 9%;
+    min-width: 75px;
+    height: 31px;
 }
 
 .round-div {
     padding: 5px;
     background-color: #000000;
-    width: 9%;
-    min-width: 75px;
-    height: 31px;
     background-color: #fff;
     text-align: center;
     box-shadow: 0px 0px 5px #4B4B4B;

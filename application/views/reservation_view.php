@@ -12,6 +12,9 @@
 <script type="text/javascript" src="<?= base_url()?>assets/bootstrap-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 <script type="text/javascript" src="<?= base_url()?>assets/bootstrap-datetimepicker-master/src/js/bootstrap-datetimepicker.js"></script>
 
+<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
 <script type="text/javascript">
 
 //Sizing
@@ -71,7 +74,11 @@ function resizeContent(){
     var buttomPageHeight = topPageHeight;
     
     var height = windowHeight / 12;
-    height = height < 50 ? 31 : height;
+    if (windowHeight < 700){
+      height = 10;
+    }
+    
+    
     $('.button-slide').css({'bottom': height});
 
     var width = $("#center-div").width();
@@ -193,10 +200,10 @@ function goNext(){
   adaptWebPage();
   adaptLayout(true);
 
-  // document.getElementById("next").onclick = function() { return true; } 
-  $("html, body").animate({ scrollTop: $(document).height() }, 700 , function() {
-      // document.getElementById("next").onclick = function() { goNext()} 
-  });
+  if (iteration != 4) $("html, body").animate({ scrollTop: $("#h2" + iteration).offset().top - 50}, 700);
+  
+
+  
 }
 
 function everythingIsGood(){
@@ -405,8 +412,7 @@ $(function(){
                 inline: true
             });
 
-  $('#time').bootstrapMaterialDatePicker({date: false , format : 'HH:mm'});
-  
+  $('#time').timepicker({'timeFormat' : 'HH:mm', 'minHour': 11, 'maxHour': 15});
   adaptWebPage();
 
   $(window).resize(function() {
@@ -423,7 +429,15 @@ $(function(){
 
 <div class="reservation_page" id="page_1" style='width: 100%;text-align:center;'>
   <div>
-    <h3 style="text-align:center;">Date and Time</h3>
+    <h2 id="h20"class="date-header">Date and Time</h2>
+
+    <div class="date-own-picker">
+      <div class="first" id="timeBox">
+        <label>Time</label>
+        <input type='text' id='time' style="border-style: solid; position: relative; text-align: center;" >
+      </div>
+    </div>
+
     <div style="overflow:hidden;">
       <div class="form-group">
           <div class="row">
@@ -434,12 +448,7 @@ $(function(){
       </div>
     </div>
     
-    <div>
-      <div class="second" id="timeBox">
-        <label>Time</label>
-        <input type='text' id='time' style="position: relative; text-align: center;" >
-      </div>
-    </div>
+    
   
   </div>
 </div>
@@ -447,7 +456,7 @@ $(function(){
 <div class="reservation_page" id="page_2" style="display: none;">
   <div class="table-wraperino">
     <div>
-      <h3 style="text-align:center;">Persons: </h3>
+      <h2 id="h21">Persons </h2>
     </div>
     	<div class="table">
         <div class="row">
@@ -471,7 +480,7 @@ $(function(){
 
 <div class="reservation_page" id="page_3" style="display: none;">
   <div>
-  <h3 style="text-align:center;">Additional Options</h3>
+  <h2 id="h22" style="text-align:center;">Additional Options</h2>
     <table class="w3-table w3-striped w3-bordered">
       <form>
           <th><label for="smoking">Smoking</label></th>
@@ -491,8 +500,10 @@ $(function(){
 </div>
 
 <div class="reservation_page" id="page_4" style="display: none;">
-	<label for="pwd">Name:</label>
-  <input style="max-width:100%; width:600px; " type="text" class="form-control" id="name">
+  <div style="width: 70%" id="haha">
+  	<h2 id="h23"> Name</h2>
+    <input style="max-width:100%; width:100%; " type="text" class="form-control" id="name">
+  </div>
 </div>
 
 <div class="reservation_page loading" id="loading" style="display: none;">
@@ -500,7 +511,7 @@ $(function(){
 
 <div class="reservation_page" id="page_5" style="display: none;">
 	<div class="wrapperino">
-  <h3 style="text-align:center;">Recap</h3>
+  <h2 style="text-align:center;" id="h25">Summary</h2>
     <table class="w3-table w3-striped w3-bordered">
         <tr>
           <th>Name</th>
@@ -536,7 +547,7 @@ $(function(){
       </span>
   </div>
   
-  <div class="round-div box">
+  <div class="box">
     <span style="display: block;" id="step">
           Krok
     </span>
