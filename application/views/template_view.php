@@ -25,10 +25,10 @@
 	<link href="<?= base_url()?>assets/css/style-common-big.css" rel="stylesheet" media="only screen and (min-width: 1001px)">
 
 </head>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="<?= base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
 
 <body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="<?= base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
 
 <?php include "nav.php";?>
 
