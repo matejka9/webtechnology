@@ -10,6 +10,7 @@
 
 <script type="text/javascript" src="<?= base_url()?>assets/moment/js/moment.min.js"></script>
 <script type="text/javascript" src="<?= base_url()?>assets/bootstrap-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
+<script type="text/javascript" src="<?= base_url()?>assets/bootstrap-datetimepicker-master/src/js/bootstrap-datetimepicker.js"></script>
 
 <script type="text/javascript">
 
@@ -110,7 +111,6 @@ function rename(){
   renameStep();
   renameNext();
   renameBack();
-  renameSuhrn();
 }
 
 
@@ -129,12 +129,12 @@ function renameSuhrn(){
     sprava = "You have not selected any additional options.";
   }
 
-
-  renameObject($('#date2'), null, null, $.datepicker.formatDate('dd M yy', datum));
-  renameObject($('#number2'),null,null, numberOfPersons);
-  renameObject($('#time2'),null,null, cas);
-  renameObject($('#addOpt2'),null,null, sprava);
-  renameObject($('#name2'),null,null, name);
+  var dstring = datum._d.getDate() + '.' + (datum._d.getMonth() + 1) + '.'   +  datum._d.getFullYear();
+  $('#date2').text(dstring);
+  $('#number2').text(numberOfPersons);
+  $('#time2').text(cas);
+  $('#addOpt2').text(sprava);
+  $('#name2').text(name);
 }
 
 function renameStep(){
@@ -219,6 +219,7 @@ function everythingIsGood(){
       //Nic toto sa robi pri klikani rovno, bydefault je vybrate 1
       console.log(numberOfPersons);
     case 0:
+      datum = $("#datetimepicker12").data("DateTimePicker").date();
       cas = $('#time').val();
       console.log(datum);
       console.log(cas);
@@ -342,10 +343,11 @@ var reservationTableId;
 function reserveTable(next){a
   var a = cas.split(':'); // split it at the colons
   var milisec = (+a[0]) * 60 * 60 * 1000 + (+a[1]) * 60 * 1000;
+  renameSuhrn();
   $.ajax({
         type:"POST",
         url: next? "<?php echo base_url(); ?>index.php/reservation/rezervuj" : "<?php echo base_url(); ?>index.php/reservation/zrusRezervaciu",
-        data: next? {"numberOfPersons": numberOfPersons, "datum": datum.getTime(), "cas": milisec, "nearWindow": nearWindow, "isSmoking": isSmoking, "sitAlone": sitAlone, "name" : name} : {"reservationTableId" : reservationTableId},
+        data: next? {"numberOfPersons": numberOfPersons, "datum": datum._d.getTime(), "cas": milisec, "nearWindow": nearWindow, "isSmoking": isSmoking, "sitAlone": sitAlone, "name" : name} : {"reservationTableId" : reservationTableId},
 
         success:function (data) {
           if (data){
@@ -397,15 +399,13 @@ $(function(){
 
   var date = new Date();
   date.setDate(date.getDate() + 7);
-  $('.myDateTimePicker').datepicker({
-    todayHighlight: true,
-    startDate: new Date(),
-    endDate: date
-  }).on('changeDate', function(e){
-    datum = e.date;
-  });
 
-  $('#time').bootstrapMaterialDatePicker({ date: false , format : 'HH:mm'});
+  $('#datetimepicker12').datetimepicker({
+                format: 'LD',
+                inline: true
+            });
+
+  $('#time').bootstrapMaterialDatePicker({date: false , format : 'HH:mm'});
   
   adaptWebPage();
 
@@ -424,8 +424,14 @@ $(function(){
 <div class="reservation_page" id="page_1" style='width: 100%;text-align:center;'>
   <div>
     <h3 style="text-align:center;">Date and Time</h3>
-  	
-    <div class="myDateTimePicker first" id="myDateTimePicker">  
+    <div style="overflow:hidden;">
+      <div class="form-group">
+          <div class="row">
+              <div class="col-md-8">
+                  <div id="datetimepicker12"></div>
+              </div>
+          </div>
+      </div>
     </div>
     
     <div>
