@@ -1,11 +1,14 @@
+<link href="<?= base_url()?>assets/css/style-menu-low.css" rel="stylesheet" media="only screen and (max-width: 500px)">
+<link href="<?= base_url()?>assets/css/style-menu-medium.css" rel="stylesheet" media="only screen and (min-width: 501px) and (max-width: 1000px)">
+<link href="<?= base_url()?>assets/css/style-menu-big.css" rel="stylesheet" media="only screen and (min-width: 1001px)">
+
+
 <script type="text/javascript">
 $(function(){
    $(".nav").find(".active").removeClass("active");
    $("#menu").parent().addClass("active");
 });
 </script>
-
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
 
 <h1>menu page</h1>

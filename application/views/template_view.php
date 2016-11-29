@@ -19,7 +19,13 @@
 	<link href="<?= base_url()?>assets/bootstrap-datepicker/css/bootstrap-datepicker3.min.css" rel="stylesheet">
 	<link href="<?= base_url()?>assets/bootstrap-datepicker/css/bootstrap-datepicker.standalone.css" rel="stylesheet">
 
-	<link href="<?= base_url()?>assets/css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	
+	<link href="<?= base_url()?>assets/css/style-common.css" rel="stylesheet">
+	<link href="<?= base_url()?>assets/css/style-common-low.css" rel="stylesheet" media="only screen and (max-width: 500px)">
+	<link href="<?= base_url()?>assets/css/style-common-medium.css" rel="stylesheet" media="only screen and (min-width: 501px) and (max-width: 1000px)">
+	<link href="<?= base_url()?>assets/css/style-common-big.css" rel="stylesheet" media="only screen and (min-width: 1001px)">
+
 </head>
 
 <body>

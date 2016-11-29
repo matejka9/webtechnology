@@ -1,0 +1,22 @@
+.menu_page{
+    position: relative; 
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.monday *{
+    background-color: rgb(255, 153, 153);
+}
+.tuesday *{
+    background-color: rgb(128, 255, 170);
+}
+.wednesday *{
+    background-color: rgb(153, 179, 255);
+}
+.thursday *{
+    background-color: rgb(255, 148, 77);
+}
+.friday *{
+    background-color: rgb(255, 173, 51);
+}

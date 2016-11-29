@@ -1,3 +1,7 @@
+<link href="<?= base_url()?>assets/css/style-contact-low.css" rel="stylesheet" media="only screen and (max-width: 500px)">
+<link href="<?= base_url()?>assets/css/style-contact-medium.css" rel="stylesheet" media="only screen and (min-width: 501px) and (max-width: 1000px)">
+<link href="<?= base_url()?>assets/css/style-contact-big.css" rel="stylesheet" media="only screen and (min-width: 1001px)">
+
 <script type="text/javascript">
 $(function(){
    $(".nav").find(".active").removeClass("active");
@@ -5,22 +9,16 @@ $(function(){
 });
 </script>
 
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+
 
 <h1>Contact page</h1>
 
-
-
-
-
-
-
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCCObpQl1lf3xSirBupKY_6tXuBrTz1r0w'></script>
 <div class="contact_page">
-    <div class= "wraperino first" style="max-width:520px; width:100%;">
+    <div style="max-width:520px; width:100%;">
 		<div>
 			<h3>Restaurant Tutorial</h3>
-			<table class="first contact_menu w3-table w3-striped w3-bordered">
+			<table class="first w3-table w3-striped w3-bordered">
 		        <tr>
 		          <th>Location</th>
 		          <td>Nedbalova 10</td>

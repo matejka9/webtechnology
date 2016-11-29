@@ -1,0 +1,13 @@
+.food_picture1{
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.home_page{
+    padding:50px;
+    padding-bottom: 0px;
+    position: relative; 
+    display: flex;
+    justify-content:center;
+    align-items:center;
+}

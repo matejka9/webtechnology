@@ -1,3 +1,6 @@
+<link href="<?= base_url()?>assets/css/style-reservation-low.css" rel="stylesheet" media="only screen and (max-width: 500px)">
+<link href="<?= base_url()?>assets/css/style-reservation-medium.css" rel="stylesheet" media="only screen and (min-width: 501px) and (max-width: 1000px)">
+<link href="<?= base_url()?>assets/css/style-reservation-big.css" rel="stylesheet" media="only screen and (min-width: 1001px)">
 
 
 <script type="text/javascript" src="<?= base_url()?>assets/bootstrap-master/js/transition.js"></script>
@@ -7,8 +10,6 @@
 
 <script type="text/javascript" src="<?= base_url()?>assets/moment/js/moment.min.js"></script>
 <script type="text/javascript" src="<?= base_url()?>assets/bootstrap-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
-
-<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
 
 <script type="text/javascript">
 
@@ -421,17 +422,19 @@ $(function(){
 
 
 <div class="reservation_page" id="page_1" style='width: 100%;text-align:center;'>
-  <div class ="wraperino">
-  <h3 style="text-align:center;">Date and Time</h3>
-	  <div class="myDateTimePicker first" id="myDateTimePicker">
-    
+  <div>
+    <h3 style="text-align:center;">Date and Time</h3>
+  	
+    <div class="myDateTimePicker first" id="myDateTimePicker">  
     </div>
-    <div class="wraperino">
+    
+    <div>
       <div class="second" id="timeBox">
         <label>Time</label>
         <input type='text' id='time' style="position: relative; text-align: center;" >
       </div>
     </div>
+  
   </div>
 </div>
 
@@ -461,7 +464,7 @@ $(function(){
 </div>
 
 <div class="reservation_page" id="page_3" style="display: none;">
-  <div class="wraperino">
+  <div>
   <h3 style="text-align:center;">Additional Options</h3>
     <table class="w3-table w3-striped w3-bordered">
       <form>

@@ -1,0 +1,119 @@
+html{
+    height: 100%;
+}
+body{
+    height: 100%;
+
+    padding-top: 75px;
+    
+
+    background: url('../images/bacground.jpg') 
+                50% 50% ;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font: 400 14px/1.6 'Open Sans', Verdana, Helvetica, sans-serif;
+
+}
+
+body.modal-open {
+    overflow: visible;
+}
+
+h1{
+    font
+    : 400 60px/1.3 'Bree Serif', Georgia, serif;
+    text-align: center;
+    color: #3F437E;
+    text-shadow: #fff 0px 0px 2px;
+
+}
+
+h2{
+    font: 400 40px/1.3 'Bree Serif', Georgia, serif;
+    text-align: center;
+    color: #5b5a7e;
+    text-shadow: #fff 0px 0px 2px;
+
+}
+
+small{
+    margin-left: 10px;
+    padding: 5px;
+    color: #BEBEBE;
+    font-size: 7pt;
+}
+footer{
+    position: relative;
+    width: 100%;
+}
+
+.navbar {
+    top: 0px;
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+}
+
+.footer-info{
+    background-color: #566AAB;
+    height: 25px;
+    color: #fff;
+    padding: 0px 15px 0px 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.footer-info a{
+    color: #000;
+}
+
+/**********
+***MAIN****
+***PAGE****
+***********
+***********/
+.container{
+    position: relative;
+    padding: 0;
+    box-shadow: 0px 0px 5px #4B4B4B;
+    background-color: #FFFFFF;
+    border-radius: 5px;
+
+    min-height: 400px;
+
+    margin-bottom: 25px;
+}
+/**********
+***MAIN****
+***PAGE****
+***********
+***********/
+
+/**********
+***UNDER***
+***EACH****
+***OTHER***
+***********/
+.first {
+    display: inline-block;
+    white-space: normal;
+    vertical-align: middle;
+    text-align:center;
+
+    font: 12px/1.5 Arial, sans-serif;
+}
+.second {
+    
+    display: inline-block;
+    white-space: normal;
+    vertical-align: middle;
+    text-align:center;
+
+    font: 12px/1.5 Arial, sans-serif;
+
+}
+/**********
+***UNDER***
+***EACH****
+***OTHER***
+***********/
