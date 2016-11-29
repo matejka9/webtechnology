@@ -454,7 +454,7 @@ $(function(){
 
 <div class="reservation_page" id="page_1" style='width: 100%;text-align:center;'>
   <div>
-    <h2 id="h20"class="date-header">Date and Time</h2>
+    <h2 id="h20" class="date-header">Date and Time</h2>
 
     <div class="date-own-picker">
       <div class="first" id="timeBox">
