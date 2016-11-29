@@ -1,8 +1,5 @@
-<!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-<script src="<?= base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html>
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -28,6 +25,8 @@
 	<link href="<?= base_url()?>assets/css/style-common-big.css" rel="stylesheet" media="only screen and (min-width: 1001px)">
 
 </head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="<?= base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
 
 <body>
 
