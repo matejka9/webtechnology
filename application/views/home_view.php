@@ -24,7 +24,7 @@ $(function(){
   Continue by selecting desired option from menu or click the button bellow to reserve.
   <br>
 
-  <div class="round-div button button-nav box" onclick="window.location.href='/webtechnology/reservation'"  id="back" style="display: block; margin-left: auto; margin-right: auto; margin-top:10px;">  
+  <div class="round-div button button-nav box" onclick="window.location.href='/webtechnology/index.php/reservation'"  id="back" style="display: block; margin-left: auto; margin-right: auto; margin-top:10px;">  
       <span style="display: block;">
           Reservation
       </span>
