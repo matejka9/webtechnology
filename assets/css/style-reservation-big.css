@@ -1,9 +1,16 @@
 .reservation_page{
-    min-height: 400px;
     position: relative; 
     display: flex;
     justify-content:center;
     align-items:center;
+}
+
+#page_1 {
+    min-height: 400px;
+}
+
+#page_5 {
+    min-height: 400px;
 }
 
 .date-header {

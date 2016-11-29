@@ -454,10 +454,31 @@ $(function(){
 </div>
 
 <div class="reservation_page" id="page_2" style="display: none;">
+  <!-- <div class="table-wraperino"> -->
   <div class="table-wraperino">
     <div>
-      <h2 id="h21">Persons </h2>
+      <h2 id="h21" style="height: 30%;">Persons </h2>
     </div>
+
+    <table style="width: 100%; height: 70%;">
+        <tr>
+          <td class="cell button" onclick="selectetNumber(this)" id="1" style="text-align: center;">1</td>
+          <td class="cell button" onclick="selectetNumber(this)" id="2" style="text-align: center;">2</td>
+          <td class="cell button" onclick="selectetNumber(this)" id="3" style="text-align: center;">3</td>
+        </tr>
+        <tr>
+          <td class="cell button" onclick="selectetNumber(this)" id="4" style="text-align: center;">4</td>
+          <td class="cell button" onclick="selectetNumber(this)" id="5" style="text-align: center;">5</td>
+          <td class="cell button" onclick="selectetNumber(this)" id="6" style="text-align: center;">6</td>
+        </tr>
+        <tr>
+          <td class="cell button" onclick="selectetNumber(this)" id="7" style="text-align: center;">7</td>
+          <td class="cell button" onclick="selectetNumber(this)" id="8" style="text-align: center;">8</td>
+          <td class="cell button" onclick="selectetNumber(this)" id="9" style="text-align: center;">9</td>
+        </tr>
+     </table>
+
+    <!-- <div class="table-wraperino">
     	<div class="table">
         <div class="row">
             <div class="cell button" onclick="selectetNumber(this)" id="1">1</div>
@@ -475,7 +496,8 @@ $(function(){
             <div class="cell button" onclick="selectetNumber(this)" id="9">9</div>
         </div>
       </div>
-    </div>
+    </div> -->
+  </div>
 </div>
 
 <div class="reservation_page" id="page_3" style="display: none;">
