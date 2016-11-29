@@ -431,7 +431,6 @@ $(function(){
       onSelect: function (dateText, inst) {
         datum = $(this).datepicker('getDate'),
         $(this).parent('form').submit();
-
       }
     });
 

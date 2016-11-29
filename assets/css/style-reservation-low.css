@@ -8,19 +8,11 @@
 #page_5 {
     min-height: 400px;
 }
-.ui-datepicker-current-day
-{
-    background: #83C948
-}
-/* today's background color */
-.ui-datepicker-today 
-{
-    background: #83C948
-}
 
-/*.date-own-picker{
-    border-bottom: 1px solid;
-}*/
+
+#ui-datepicker-div .ui-state-active {
+    color: #CC0000;
+}
 
 .date-header {
     text-align:center;
