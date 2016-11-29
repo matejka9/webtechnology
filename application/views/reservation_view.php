@@ -16,7 +16,7 @@
 //Sizing
 var headerWindowHeight= 50;
 var headerWindowSpaceHeight= 25;
-var footerWindowSpaceHeight= 25+ 41;
+var footerWindowSpaceHeight= 25+ 41 + 31;
 
 //Steping
 var iteration = 0;
