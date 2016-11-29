@@ -9,3 +9,25 @@
     position: relative; 
     
 }
+
+.round-div {
+    padding: 5px;
+    background-color: #000000;
+    width: 9%;
+    min-width: 75px;
+    height: 31px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0px 0px 5px #4B4B4B;
+    border-radius: 20px;
+}
+
+.button-nav{
+    display: block;
+}
+
+.button-nav:hover{
+    text-decoration: none;
+    color: #fff;
+    cursor: pointer;
+}

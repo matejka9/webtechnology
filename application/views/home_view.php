@@ -24,8 +24,12 @@ $(function(){
   Continue by selecting desired option from menu or click the button bellow to reserve.
   <br>
 
-  <button class="button-nav round-div" onclick="window.location.href='/webtechnology/reservation'" style="position:relative; left: 50%; margin-top:10px;">Reservation</button>
-</section>
+  <div class="round-div button button-nav box" onclick="window.location.href='/webtechnology/reservation'"  id="back" style="display: block; margin-left: auto; margin-right: auto; margin-top:10px;">  
+      <span style="display: block;">
+          Reservation
+      </span>
+  </div>
+ </section>
 
 <section class="home_page" style="position:relative";>
 	<img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/food.jpg" alt="food_picture1" style="max-width:500px;max-height:500px; height:100%; width:100%;padding-right:25px";>
