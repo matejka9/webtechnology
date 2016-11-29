@@ -419,8 +419,7 @@ $(function(){
       minDate: new Date(),
       maxDate: 7,
       onSelect: function (dateText, inst) {
-        datum = $(this).datepicker('getDate'),
-        $(this).parent('form').submit();
+        datum = $(this).datepicker('getDate')
       }
     });
 
@@ -428,8 +427,7 @@ $(function(){
       minDate: new Date(),
       maxDate: 7,
       onSelect: function (dateText, inst) {
-        datum = $(this).datepicker('getDate'),
-        $(this).parent('form').submit();
+        datum = $(this).datepicker('getDate')
       }
     });
 
@@ -507,7 +505,6 @@ $(function(){
   <div>
   <h2 id="h22" style="text-align:center;">Additional Options</h2>
     <table class="w3-table w3-striped w3-bordered">
-      <form>
           <th><label for="smoking">Smoking</label></th>
           <td><input type="checkbox" name="vehicle" value="Bike" id="smoking"><br></td>
         </tr>
@@ -519,7 +516,6 @@ $(function(){
           <th><label for="window">Window</label></th>
           <td><input type="checkbox" name="vehicle" value="Bike" id="window"><br></td>
         </tr>
-      </form> 
      </table>
   </div>
 </div>
