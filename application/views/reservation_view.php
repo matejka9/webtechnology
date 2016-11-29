@@ -505,6 +505,7 @@ $(function(){
   <div>
   <h2 id="h22" style="text-align:center;">Additional Options</h2>
     <table class="w3-table w3-striped w3-bordered">
+        <tr>
           <th><label for="smoking">Smoking</label></th>
           <td><input type="checkbox" name="vehicle" value="Bike" id="smoking"><br></td>
         </tr>
