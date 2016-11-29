@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/html">
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
 <script src="<?= base_url()?>assets/bootstrap/js/bootstrap.min.js"></script>
 <head>
 	<meta charset="utf-8">

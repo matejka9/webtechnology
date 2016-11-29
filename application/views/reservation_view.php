@@ -13,7 +13,6 @@
 <script type="text/javascript" src="<?= base_url()?>assets/bootstrap-datetimepicker-master/src/js/bootstrap-datetimepicker.js"></script>
 
 <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
 
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
@@ -373,8 +372,8 @@ function reserveTable(next){a
               return;
             }
           }
-        window.alert("Something went wrong");
-        goBack();       
+        goBack();
+        openModal('Sorry', 'For selected time with your requirments, we dont have any more free tables.');       
       }
     });
 }
