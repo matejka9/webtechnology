@@ -466,7 +466,7 @@ $(function(){
     
     <div id="datetimepicker12"></div>
 
-    <div id="datetimepicker11" style="displayy: none;">
+    <div id="datetimepicker11" style="display: none;">
       Date: <input type="text" id="datepicker" name="datepicker" style="border-style: solid; position: relative; text-align: center;"/>
     </div>
     
