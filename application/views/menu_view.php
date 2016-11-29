@@ -23,7 +23,7 @@ $(function(){
         </tr>
         
         <tr class="monday">
-          <th border>Monday</th>
+          <th>Monday</th>
           <td>	Kuracie prsia „BALZAMICO" grilované prsia, bazalka, rucola, lolo biondo šalát, olivy, balzamicový krém</td>
           <td> 8 eur</td>
         </tr>

@@ -11,7 +11,7 @@ $(function(){
 </script>
 <h1>HOME</h1>
 
-<section class="home_page" style="position:relative";>
+<section class="home_page" style="position: relative;">
   <b>Welcome to our Gastro Page !!! </b> <br>
   On this website you can look at our weekly menu, as well as reserve table with options according to your selection. If you want to view our food options, pick option "Daily Menu" from menu bar. If you want to reserve table, click "Reservation" and let our page guide you through reservation process. If you are new customer, you might want to know where our restauration is located. If this is the case, click "Contact" option in the menu.<br>
   <h5> Reservation process.</h5>
@@ -31,7 +31,7 @@ $(function(){
   </div>
  </section>
 
-<section class="home_page" style="position:relative";>
+<section class="home_page" style="position:relative">
 	<img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/food.jpg" alt="food_picture1" style="max-width:500px;max-height:500px; height:100%; width:100%; padding-right:25px; display: block; margin-left: auto; margin-right: auto;";>
 </section>
 
