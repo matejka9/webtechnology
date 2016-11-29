@@ -144,7 +144,7 @@ function renameSuhrn(){
     sprava = "You have not selected any additional options.";
   }
 
-  var dstring = datum._d.getDate() + '.' + (datum._d.getMonth() + 1) + '.'   +  datum._d.getFullYear();
+  var dstring = datum.getDate() + '.' + (datum.getMonth() + 1) + '.'   +  datum.getFullYear();
   $('#date2').text(dstring);
   $('#number2').text(numberOfPersons);
   $('#time2').text(cas);
@@ -234,7 +234,6 @@ function everythingIsGood(){
       //Nic toto sa robi pri klikani rovno, bydefault je vybrate 1
       console.log(numberOfPersons);
     case 0:
-      datum = $("#datetimepicker12").data("DateTimePicker").date();
       cas = $('#time').val();
       console.log(datum);
       console.log(cas);
@@ -362,7 +361,7 @@ function reserveTable(next){a
   $.ajax({
         type:"POST",
         url: next? "<?php echo base_url(); ?>index.php/reservation/rezervuj" : "<?php echo base_url(); ?>index.php/reservation/zrusRezervaciu",
-        data: next? {"numberOfPersons": numberOfPersons, "datum": datum._d.getTime(), "cas": milisec, "nearWindow": nearWindow, "isSmoking": isSmoking, "sitAlone": sitAlone, "name" : name} : {"reservationTableId" : reservationTableId},
+        data: next? {"numberOfPersons": numberOfPersons, "datum": datum.getTime(), "cas": milisec, "nearWindow": nearWindow, "isSmoking": isSmoking, "sitAlone": sitAlone, "name" : name} : {"reservationTableId" : reservationTableId},
 
         success:function (data) {
           if (data){
@@ -418,14 +417,21 @@ $(function(){
   $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
     $( "#datetimepicker12" ).datepicker({
       inline: true,
+      minDate: new Date(),
+      maxDate: 7,
       onSelect: function (dateText, inst) {
+        datum = $(this).datepicker('getDate'),
         $(this).parent('form').submit();
       }
     });
 
     $( "#datepicker" ).datepicker({
+      minDate: new Date(),
+      maxDate: 7,
       onSelect: function (dateText, inst) {
+        datum = $(this).datepicker('getDate'),
         $(this).parent('form').submit();
+
       }
     });
 
@@ -439,7 +445,11 @@ $(function(){
   selectetNumber($('#1'));
 
   $("html, body").animate({ scrollTop: $("#h2" + iteration).offset().top - 50}, 700);
-   
+
+  $('#datepicker').datepicker("setDate", new Date());
+  $('#datetimepicker12').datepicker("setDate", new Date());
+
+  datum = $( "#datepicker" ).datepicker( "getDate" );
 });
 
 </script>

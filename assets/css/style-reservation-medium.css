@@ -8,7 +8,9 @@
 #page_5 {
     min-height: 400px;
 }
-
+#ui-datepicker-div .ui-state-select {
+   background:red;
+}
 /*.date-header {
     text-align:center;
     padding-bottom: 5%;

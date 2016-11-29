@@ -5,6 +5,10 @@
     align-items:center;
 }
 
+#ui-datepicker-div .ui-state-highlight {
+   background:red;
+}
+
 #page_5 {
     min-height: 400px;
 }
