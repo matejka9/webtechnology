@@ -32,7 +32,7 @@ $(function(){
  </section>
 
 <section class="home_page" style="position:relative";>
-	<img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/food.jpg" alt="food_picture1" style="max-width:500px;max-height:500px; height:100%; width:100%;padding-right:25px";>
+	<img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/food.jpg" alt="food_picture1" style="max-width:500px;max-height:500px; height:100%; width:100%; padding-right:25px; display: block; margin-left: auto; margin-right: auto;";>
 </section>
 
 <section class="home_page" style="position:relative;">
