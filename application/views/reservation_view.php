@@ -12,8 +12,14 @@
 <script type="text/javascript" src="<?= base_url()?>assets/bootstrap-datetimepicker/js/bootstrap-material-datetimepicker.js"></script>
 <script type="text/javascript" src="<?= base_url()?>assets/bootstrap-datetimepicker-master/src/js/bootstrap-datetimepicker.js"></script>
 
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
 <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.css">
 <script src="//cdnjs.cloudflare.com/ajax/libs/timepicker/1.3.5/jquery.timepicker.min.js"></script>
+
+
 
 <script type="text/javascript">
 
@@ -72,17 +78,19 @@ function resizeContent(){
     var topPageHeight = windowHeight - headerWindowHeight - headerWindowSpaceHeight;
     var midPageHeight = windowHeight - headerWindowHeight ;
     var buttomPageHeight = topPageHeight;
-    
-    var height = windowHeight / 12;
-    if (windowHeight < 700){
-      height = 10;
-    }
-    
-    
-    $('.button-slide').css({'bottom': height});
+
+    $('.button-slide').css({'bottom': 10});
 
     var width = $("#center-div").width();
     var windowWidth =$(".container").width();
+
+    if (windowHeight < 570 || windowWidth < 300){
+      $( "#datetimepicker12" ).hide();
+      $( "#datetimepicker11" ).show();
+    }else{
+      $( "#datetimepicker11" ).hide();
+      $( "#datetimepicker12" ).show();
+    }
     $('#center-div').css({'left': ((windowWidth / 2) - (width / 2))});
 
     switch (iteration) {
@@ -407,10 +415,19 @@ $(function(){
   var date = new Date();
   date.setDate(date.getDate() + 7);
 
-  $('#datetimepicker12').datetimepicker({
-                format: 'LD',
-                inline: true
-            });
+  $.datepicker.setDefaults( $.datepicker.regional[ "" ] );
+    $( "#datetimepicker12" ).datepicker({
+      inline: true,
+      onSelect: function (dateText, inst) {
+        $(this).parent('form').submit();
+      }
+    });
+
+    $( "#datepicker" ).datepicker({
+      onSelect: function (dateText, inst) {
+        $(this).parent('form').submit();
+      }
+    });
 
   $('#time').timepicker({'timeFormat' : 'HH:mm', 'minHour': 11, 'maxHour': 15});
   adaptWebPage();
@@ -420,6 +437,8 @@ $(function(){
   });
 
   selectetNumber($('#1'));
+
+  $("html, body").animate({ scrollTop: $("#h2" + iteration).offset().top - 50}, 700);
    
 });
 
@@ -438,14 +457,11 @@ $(function(){
       </div>
     </div>
 
-    <div style="overflow:hidden;">
-      <div class="form-group">
-          <div class="row">
-              <div class="col-md-8">
-                  <div id="datetimepicker12"></div>
-              </div>
-          </div>
-      </div>
+    
+    <div id="datetimepicker12"></div>
+
+    <div id="datetimepicker11" style="displayy: none;">
+      Date: <input type="text" id="datepicker" name="datepicker" style="border-style: solid; position: relative; text-align: center;"/>
     </div>
     
     
@@ -454,7 +470,6 @@ $(function(){
 </div>
 
 <div class="reservation_page" id="page_2" style="display: none;">
-  <!-- <div class="table-wraperino"> -->
   <div class="table-wraperino">
     <div>
       <h2 id="h21" style="height: 30%;">Persons </h2>
@@ -477,26 +492,6 @@ $(function(){
           <td class="cell button" onclick="selectetNumber(this)" id="9" style="text-align: center;">9</td>
         </tr>
      </table>
-
-    <!-- <div class="table-wraperino">
-    	<div class="table">
-        <div class="row">
-            <div class="cell button" onclick="selectetNumber(this)" id="1">1</div>
-            <div class="cell button" onclick="selectetNumber(this)" id="2">2</div>
-            <div class="cell button" onclick="selectetNumber(this)" id="3">3</div>
-        </div>
-        <div class="row">
-            <div class="cell button" onclick="selectetNumber(this)" id="4">4</div>
-            <div class="cell button" onclick="selectetNumber(this)" id="5">5</div>
-            <div class="cell button" onclick="selectetNumber(this)" id="6">6</div>
-        </div>
-        <div class="row">
-            <div class="cell button" onclick="selectetNumber(this)" id="7">7</div>
-            <div class="cell button" onclick="selectetNumber(this)" id="8">8</div>
-            <div class="cell button" onclick="selectetNumber(this)" id="9">9</div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </div>
 
