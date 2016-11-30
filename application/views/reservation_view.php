@@ -64,6 +64,16 @@ function selectetNumber(object){
   $(idcko).css('color', '#fff');
 }
 
+function selectetInfo(id_obj) {
+  if (id_obj == 'info1'){
+    openModal('Smoking', 'By selecting this option, you accept to sit in smoking area.');
+  } else if (id_obj == 'info2'){
+    openModal('Alone', 'By selecting this option, your group will not be joined with other cutomers.');
+  } else if (id_obj == 'info3'){
+    openModal('Window', 'By selecting this option, your table will be near window.');
+  }
+}
+
 //UI
 function adaptWebPage() {
    resizeContent();
@@ -483,19 +493,19 @@ $(function(){
 
     <table style="width: 100%; height: 70%;">
         <tr>
-          <td class="cell button" onclick="selectetNumber(this)" id="1" style="text-align: center;">1</td>
-          <td class="cell button" onclick="selectetNumber(this)" id="2" style="text-align: center;">2</td>
-          <td class="cell button" onclick="selectetNumber(this)" id="3" style="text-align: center;">3</td>
+          <td class="cell button" onclick="selectetNumber(this)" id="1" style="text-align: center; font-size: 1.3em;"><b>1</b></td>
+          <td class="cell button" onclick="selectetNumber(this)" id="2" style="text-align: center; font-size: 1.3em;"><b>2</b></td>
+          <td class="cell button" onclick="selectetNumber(this)" id="3" style="text-align: center; font-size: 1.3em;"><b>3</b></td>
         </tr>
         <tr>
-          <td class="cell button" onclick="selectetNumber(this)" id="4" style="text-align: center;">4</td>
-          <td class="cell button" onclick="selectetNumber(this)" id="5" style="text-align: center;">5</td>
-          <td class="cell button" onclick="selectetNumber(this)" id="6" style="text-align: center;">6</td>
+          <td class="cell button" onclick="selectetNumber(this)" id="4" style="text-align: center; font-size: 1.3em;"><b>4</b></td>
+          <td class="cell button" onclick="selectetNumber(this)" id="5" style="text-align: center; font-size: 1.3em;"><b>5</b></td>
+          <td class="cell button" onclick="selectetNumber(this)" id="6" style="text-align: center; font-size: 1.3em;"><b>6</b></td>
         </tr>
         <tr>
-          <td class="cell button" onclick="selectetNumber(this)" id="7" style="text-align: center;">7</td>
-          <td class="cell button" onclick="selectetNumber(this)" id="8" style="text-align: center;">8</td>
-          <td class="cell button" onclick="selectetNumber(this)" id="9" style="text-align: center;">9</td>
+          <td class="cell button" onclick="selectetNumber(this)" id="7" style="text-align: center; font-size: 1.3em;"><b>7</b></td>
+          <td class="cell button" onclick="selectetNumber(this)" id="8" style="text-align: center; font-size: 1.3em;"><b>8</b></td>
+          <td class="cell button" onclick="selectetNumber(this)" id="9" style="text-align: center; font-size: 1.3em;"><b>9</b></td>
         </tr>
      </table>
   </div>
@@ -506,14 +516,17 @@ $(function(){
   <h2 id="h22" style="text-align:center;">Additional Options</h2>
     <table class="w3-table w3-striped w3-bordered">
         <tr>
+          <td><img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/information.png" alt="information" style="height: 25px; width: 25px; margin-left: auto; margin-right: auto;" onclick="selectetInfo(this.id)" id="info1"></td>
           <th><label for="smoking">Smoking</label></th>
           <td><input type="checkbox" name="vehicle" value="Bike" id="smoking"><br></td>
         </tr>
         <tr>
+          <td><img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/information.png" alt="information" style="height: 25px; width: 25px; margin-left: auto; margin-right: auto;" onclick="selectetInfo(this.id)" id="info2"></td>
           <th><label for="alone">Alone</label></th>
           <td><input type="checkbox" name="vehicle" value="Car" id="alone"><br></td>
         </tr>
         <tr>
+          <td><img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/information.png" alt="information" style="height: 25px; width: 25px; margin-left: auto; margin-right: auto;" onclick="selectetInfo(this.id)" id="info3"></td>
           <th><label for="window">Window</label></th>
           <td><input type="checkbox" name="vehicle" value="Bike" id="window"><br></td>
         </tr>
