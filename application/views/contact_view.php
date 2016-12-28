@@ -9,9 +9,13 @@ $(window).load(function(){
     var h = window.innerHeight;
     console.log(w);
     console.log(h);
-    if (w < 520){
+    if (w < 320){
     	$("#mapaGoogle").hide();
+    }else if (w < 520){
+    	$("#mapaGoogle").show();
+    	$("#mapaGoogle").css('width', 300);
     } else {
+    	$("#mapaGoogle").css('width', 520);
     	$("#mapaGoogle").show();
     }
 });
@@ -21,9 +25,13 @@ $(window).resize(function(){
 	var w = window.innerWidth;
     var h = window.innerHeight;
 
-    if (w < 520){
+    if (w < 320){
     	$("#mapaGoogle").hide();
+    }else if (w < 520){
+    	$("#mapaGoogle").show();
+    	$("#mapaGoogle").css('width', 300);
     } else {
+    	$("#mapaGoogle").css('width', 520);
     	$("#mapaGoogle").show();
     }
 });
@@ -91,18 +99,34 @@ $(function(){
 			</table>
 		</div>
 		<br>
-		<!-- <div class= "second" id="mapaGoogle">
-			<div style='overflow:hidden;height:400px;width:520px;'>
+		<div class= "second" id="mapaGoogle">
+			<div style='overflow:hidden;'>
 				<div id='gmap_canvas' style='height:400px;width:520px;'></div>
 				<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
 			</div> <a href='http://maps-website.com/'>www.Maps-website.com</a> 
-		</div> -->
+		</div>
 	</div>
 </div>
 
-<!-- <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=4c65c7bd8843a7a7357017fa4a4a65fb8506dd59'></script>
+<script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=4c65c7bd8843a7a7357017fa4a4a65fb8506dd59'></script>
 <script type='text/javascript'>
-function init_map(){var myOptions = {zoom:17,center:new google.maps.LatLng(48.1442093,17.11099809999996),mapTypeId: google.maps.MapTypeId.ROADMAP};map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);marker = new google.maps.Marker({map: map,position: new google.maps.LatLng(48.1442093,17.11099809999996)});infowindow = new google.maps.InfoWindow({content:'<strong>Tutorial Restaurant</strong><br>Nedbalova 10<br>811 01 Bratislava 1<br>'});google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});infowindow.open(map,marker);}google.maps.event.addDomListener(window, 'load', init_map);</script> -->
+function init_map(){
+	var myOptions = {zoom:17,
+		center:new google.maps.LatLng(48.1442093,17.11099809999996),
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	};
+	map = new google.maps.Map(document.getElementById('gmap_canvas'), myOptions);
+
+	marker = new google.maps.Marker({map: map,position: 
+		new google.maps.LatLng(48.1442093,17.11099809999996)});
+
+	infowindow = new google.maps.InfoWindow({content:'<strong>Tutorial Restaurant</strong><br>Nedbalova 10<br>811 01 Bratislava 1<br>'});
+	google.maps.event.addListener(marker, 'click', function(){infowindow.open(map,marker);});
+	infowindow.open(map,marker);}
+
+	google.maps.event.addDomListener(window, 'load', init_map);
+
+</script>
 
 
 <!-- <div id="map"></div> -->
