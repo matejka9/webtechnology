@@ -26,7 +26,7 @@ $(function(){
 </div>
 
 <article class="home_page">
-  <h2>Spokojný zákaznici</h2>
+  <h2>Spokojní zákazníci</h2>
   
   <section>
     <figure class='centerer space'>
