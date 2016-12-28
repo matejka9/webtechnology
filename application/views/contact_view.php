@@ -46,16 +46,16 @@ $(function(){
 
 
 <section>
-<h1>Contact</h1>
+<h1>Kontakt</h1>
 
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCCObpQl1lf3xSirBupKY_6tXuBrTz1r0w'></script>
 <div class="contact_page">
     <div class="first content">
 		<div id="contactText" >
-			<h3>Restaurant Tutorial 3 2016</h3>
+			<h3>Reštaurácia Tutorial 3 2016</h3>
 			<table class="w3-table w3-striped w3-bordered">
 		        <tr>
-		          <th>Location</th>
+		          <th>Miesto</th>
 		          <td>Nedbalova 10</td>
 		        </tr>
 		        <tr>
@@ -67,11 +67,11 @@ $(function(){
 		           <td>Bratislava 1</td>
 		        </tr>
 		        <tr>
-		          <th>Call us</th>
+		          <th>Telefón</th>
 		          <td>0902 222 333</td>
 		        </tr>
 		        <tr>
-		          <th>E-mail us</th>
+		          <th>E-mail</th>
 		          <td>tutorialFood@gmail.com</td>
 		        </tr>
 			</table>

@@ -7,15 +7,15 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span> 
       </button>
-      <a class="navbar-brand" href="home">Restaurant Tutorial 3 2016</a>
+      <a class="navbar-brand" href="home">Reštaurácia Tutorial 3 2016</a>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><?= anchor('home','Home', 'id="home" class="active"') ?></li>
-        <li><?= anchor('about','About us', 'id="about"') ?></li>
-        <li><?= anchor('menu','Daily menu', 'id="menu"') ?></li>
-        <li><?= anchor('reservation','Reservation', 'id="reservation"') ?></li>
-        <li><?= anchor('contact','Contact', 'id="contact"') ?></li>
+        <li><?= anchor('home','Domov', 'id="home" class="active"') ?></li>
+        <li><?= anchor('about','O nás', 'id="about"') ?></li>
+        <li><?= anchor('menu','Denné menu', 'id="menu"') ?></li>
+        <li><?= anchor('reservation','Rezervácia', 'id="reservation"') ?></li>
+        <li><?= anchor('contact','Kontakt', 'id="contact"') ?></li>
       </ul>
     </div>
   </div>

@@ -1,4 +1,4 @@
-.picture-wrapper {
+.centerer {
     margin: auto;
     display: block;
     text-align: center;
@@ -39,4 +39,8 @@
     color: #fff;
     background-color: #FF7856;
     cursor: pointer;
+}
+
+.space {
+    margin-top: 30px;
 }

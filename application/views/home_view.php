@@ -9,42 +9,53 @@ $(function(){
    $("#home").parent().addClass("active");
 });
 </script>
-<h1>Home</h1>
 
-<section class="home_page" style="position: relative;">
-  <h5>Welcome to our Gastro Page !!! </h5>
-  <p>
-  This page is created to easen ur life by allowing you to fast and confortable reserve table in our restaurant and avoid any unwanted problems. Our reservation process allows you to specify time and other options that makes your visit in our restaurant unforgettable experience.
-  </p>
+<h1>Domov</h1>
+
+<article class="home_page">
+  <h3>Vitajte na stránkach reštaurácie Tutorial 3 2016 </h3>
+  <p>Tešíme sa z Vašeho záujmu a očakávame Vás v našich priestoroch kde Vás obslúži náš profesionálny tým a jedľa Vám budú pripravované pod osobným dozorom svetoznámeho šéfkuchára Dušana Zagyho.</p>
+  <p>V reštaurácií Tutorial 3 2016 používame iba ingrediencie najväčšej kvality a čerstvosti na zostrojenie Vašeho perfektného jedla. V prípade záujmu pozrite si naše denné menu a pokiaľ Vás naša ponuka zaujme, môžete si rovno zarezervovať stôl z pohodlia Vášho domova na pár klikov.</p>
+  <p>Ak si prídete sadnúť len kvôli nápojom, nebudeme Vás súdiť - naopak sme hrdý na náš výber kokteilov , vín, pív, či džúsov podľa Vášho výberu</p>
+ </article>
+
+ <div class="round-div button button-nav box reservbut" onclick="window.location.href='/webtechnology/index.php/reservation'"  id="back">  
+      <span>
+          Rezervácia
+      </span>
+</div>
+
+<article class="home_page">
+  <h2>Spokojný zákaznici</h2>
   
- </section>
+  <section>
+    <figure class='centerer space'>
+  	 <img class="centerer food_picture img-responsive" src="<?= base_url()?>assets/images/businessman.jpg" alt="podnikatel">
+     <figcaption class='centerer'>
+        Zákaznik: Podnikateľ Jožo
+      </figcaption>
+    </figure>
+    <p class='space'>
+      Podnikateľ Jožo je naším každodenným zákaznikom už od otvorenia. Vídame ho tu pravidelne od pondelka do piatku počas našich obedových hodín. Naša reštaurácia sa nachádza v centre mesta a denne nás navštevujú podnikatelia, ktorým ponúkame rýchlu a zdravú alternatívu fastfood-ových reštarácii. 
+    </p>
+    <p class='cit centerer'>
+      <q>Pokým som nepoznal reštauráciu Tutorial 3 2016, moje stravovacie náviky boli veľmi nezdravé. Vďaka ich jednoduchej a rýchlej rezervácii dostanem kvalitné jedlo bez čakania.</q>
+    </p>
+  </section>
 
-<section class="home_page" style="position:relative">
-  <h2>Satisfied costumers</h2>
+  <section>
+    <figure class='centerer space'>
+      <img class="centerer food_picture img-responsive" src="<?= base_url()?>assets/images/vegangirl.jpg" alt="veganka">
+      <figcaption class='centerer'>
+        Zákaznik: Vegánka Janka
+      </figcaption>
+    </figure>
+    <p class='space'>
+      Naša reštaurácia uľahodí aj najkomplikovanejším stravovacím požiadavkám naších zákaznikov. Denne ponúkame štyri možnosti obedového menu, z ktorého aspoň jedna vyhovuje aj vegánskym zákaznikom.
+    </p>
+    <p class='cit centerer'>
+      <q>Moja životná voľba mi prináša časté problémi pri stravovaní. Reštauráciu Tutorial 3 2016 je ako darom z nebies. Každý deň ponúkajú vegánsku alternatívu obeda.</q>
+    </p>
+  </section>
+</article>
 
-  <figure class='centerer'>
-	 <img class="centerer food_picture img-responsive" src="<?= base_url()?>assets/images/businessman.jpg" alt="food_picture">
-   <figcaption class='centerer'>
-      Businessman John
-    </figcaption>
-  </figure>
-  <p>
-    Blabla
-    agagas
-
-  </p>
-
-  <figure class='centerer'>
-    <img class="centerer food_picture img-responsive" src="<?= base_url()?>assets/images/vegangirl.jpg" alt="food_picture">
-    <figcaption class='centerer'>
-      Vegan-girl Alice
-    </figcaption>
-  </figure>
-</section>
-
-<section class="home_page" style="position:relative;">
-  <h2>Ipsum</h2>
-  Lorem Ipsum je fiktívny text, používaný pri návrhu tlačovín a typografie. Lorem Ipsum je štandardným výplňovým textom už od 16. storočia, keď neznámy tlačiar zobral sadzobnicu plnú tlačových znakov a pomiešal ich, aby tak vytvoril vzorkovú knihu. Prežil nielen päť storočí, ale aj skok do elektronickej sadzby, a pritom zostal v podstate nezmenený. Spopularizovaný bol v 60-tych rokoch 20.storočia, vydaním hárkov Letraset, ktoré obsahovali pasáže Lorem Ipsum, a neskôr aj publikačným softvérom ako Aldus PageMaker, ktorý obsahoval verzie Lorem Ipsum.
-
-Lorem Ipsum je fiktívny text, používaný pri návrhu tlačovín a typografie. Lorem Ipsum je štandardným výplňovým textom už od 16. storočia, keď neznámy tlačiar zobral sadzobnicu plnú tlačových znakov a pomiešal ich, aby tak vytvoril vzorkovú knihu. Prežil nielen päť storočí, ale aj skok do elektronickej sadzby, a pritom zostal v podstate nezmenený. Spopularizovaný bol v 60-tych rokoch 20.storočia, vydaním hárkov Letraset, ktoré obsahovali pasáže Lorem Ipsum, a neskôr aj publikačným softvérom ako Aldus PageMaker, ktorý obsahoval verzie Lorem Ipsum.
-</section>

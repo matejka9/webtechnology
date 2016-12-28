@@ -11,7 +11,7 @@ $(function(){
 </script>
 
 <section>
-<h1>Daily Menu</h1>
+<h1>Denné Menu</h1>
 
 <div class="wrapperino menu_page">
 <div>
@@ -19,11 +19,11 @@ $(function(){
         <tr>
           <td></td>
           <td></td>
-          <th>Price</th>
+          <th>Cena</th>
         </tr>
         
         <tr class="monday">
-            <th>Monday</th>
+            <th>Pondelok</th>
             <td>Šampiňónová krémová polievka</td>
             <td></td>
         </tr>
@@ -50,7 +50,7 @@ $(function(){
         </tr>
 
         <tr class="tuesday">
-          <th>Tuesday</th>
+          <th>Utorok</th>
           <td>Fazuľová polievka na kyslo</td>
             <td></td>
         </tr>
@@ -78,7 +78,7 @@ $(function(){
         </tr>
 
         <tr class="wednesday">
-          <th>Wednesday</th>
+          <th>Streda</th>
           <td>Cesnaková polievka</td>
             <td></td>
         </tr>
@@ -106,7 +106,7 @@ $(function(){
         </tr>
 
         <tr class="thursday">
-          <th>Thursday</th>
+          <th>Štvrtok</th>
           <td>Hokkaido polievka</td>
             <td></td>
         </tr>
@@ -134,7 +134,7 @@ $(function(){
         </tr>
 
         <tr class="friday">
-          <th>Friday</th>
+          <th>Piatok</th>
           <td>Tekvicová polievka</td>
             <td></td>
         </tr>

@@ -66,11 +66,11 @@ function selectetNumber(object){
 
 function selectetInfo(id_obj) {
   if (id_obj == 'info1'){
-    openModal('Smoking', 'By selecting this option, you accept to sit in smoking area.');
+    openModal('Fajčenie', 'Zvolením tejto možnosti, súhlasite so zaradením do fajčiarskej zóny.');
   } else if (id_obj == 'info2'){
-    openModal('Alone', 'By selecting this option, your group will not be joined with other cutomers.');
+    openModal('Osamote', 'Zvolením tejto možnosti, požadujete samostatný stôl. Nebude k Vám priradený iný zákaznik v pripade nedostatku miesta.');
   } else if (id_obj == 'info3'){
-    openModal('Window', 'By selecting this option, your table will be near window.');
+    openModal('Okno', 'Zvolením tejto možnosti, požadujete stôl pri okne.');
   }
 }
 
@@ -139,18 +139,18 @@ function rename(){
 
 
 function renameSuhrn(){
-  var sprava = "Your table ";
+  var sprava = "";
   if (nearWindow){
-     sprava += "is near window "
+     sprava += "Pri okne. "
   }
   if(isSmoking){
-    sprava += "is in smoking area "
+      sprava += "Vo fajčiarskej zóne. "
   }
   if(sitAlone){
-    sprava += "will not be shared with other customers"
+    sprava += "Stôl nebude zdielaný s inými zákaznikmi."
   }
   if (!nearWindow && !isSmoking && !sitAlone){
-    sprava = "You have not selected any additional options.";
+    sprava = "Nezvolili ste žiadne doplňujúce možnosti.";
   }
 
   var dstring = datum.getDate() + '.' + (datum.getMonth() + 1) + '.'   +  datum.getFullYear();
@@ -162,15 +162,15 @@ function renameSuhrn(){
 }
 
 function renameStep(){
-  renameObject($('#step'), (iteration + 1) + ' / 4', (iteration + 1) + ' / 4', 'Done');
+  renameObject($('#step'), (iteration + 1) + ' / 4', (iteration + 1) + ' / 4', 'Dokončené');
 }
 
 function renameNext(){
-  renameObject($('#next'), 'Next', 'Next', 'Home');
+  renameObject($('#next'), 'Ďalej', 'Ďalej', 'Domov');
 }
 
 function renameBack(){
-  renameObject($('#back'), null, 'Back', 'Delete');
+  renameObject($('#back'), null, 'Späť', 'Zmazať');
 }
 
 function renameObject(object, start, during, end){
@@ -229,7 +229,7 @@ function everythingIsGood(){
       name = $('#name').val();
       console.log(name);
       if (!name || name == "") {
-        openModal('Name', 'Please write down name for reservation.');
+        openModal('Meno', 'Prosím zadajte meno pre rezerváciu.');
         return false;
     }
     case 2:
@@ -247,7 +247,7 @@ function everythingIsGood(){
       console.log(datum);
       console.log(cas);
       if (!cas || !datum) {
-        openModal('Date and Time', 'Please select date and time for your reservation.');
+        openModal('Dátum a Čas', 'Prosím zadajte dátum a čas Vašej rezervácie.');
         return false;
       }
     default:
@@ -383,7 +383,7 @@ function reserveTable(next){a
             }
           }
         goBack();
-        openModal('Sorry', 'For selected time with your requirments, we dont have any more free tables.');       
+        openModal('Prepáčte', 'Pre Vaše zvolené požiadavky, bohužiaľ nemáme žiadny voľný stôl.');       
       }
     });
 }
@@ -464,11 +464,11 @@ $(function(){
 
 <div class="reservation_page" id="page_1" style='width: 100%;text-align:center;'>
   <div>
-    <h2 id="h20" class="date-header">Date and Time</h2>
+    <h2 id="h20" class="date-header">Dátum a Čas</h2>
 
     <div class="date-own-picker">
       <div class="first" id="timeBox">
-        <label>Time</label>
+        <label>Čas</label>
         <input type='text' id='time' style="border-style: solid; position: relative; text-align: center;" >
       </div>
     </div>
@@ -477,7 +477,7 @@ $(function(){
     <div id="datetimepicker12"></div>
 
     <div id="datetimepicker11" style="display: none;">
-      Date: <input type="text" id="datepicker" name="datepicker" style="border-style: solid; position: relative; text-align: center;">
+      Dátum<input type="text" id="datepicker" name="datepicker" style="border-style: solid; position: relative; text-align: center;">
     </div>
     
     
@@ -488,7 +488,7 @@ $(function(){
 <div class="reservation_page" id="page_2" style="display: none;">
   <div class="table-wraperino">
     <div>
-      <h2 id="h21" style="height: 30%;">Persons </h2>
+      <h2 id="h21" style="height: 30%;">Počet osôb </h2>
     </div>
 
     <table style="width: 100%; height: 70%;">
@@ -513,21 +513,21 @@ $(function(){
 
 <div class="reservation_page" id="page_3" style="display: none;">
   <div>
-  <h2 id="h22" style="text-align:center;">Additional Options</h2>
+  <h2 id="h22" style="text-align:center;">Doplňujúce požiadavky</h2>
     <table class="w3-table w3-striped w3-bordered">
         <tr>
           <td><img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/information.png" alt="information" style="height: 25px; width: 25px; margin-left: auto; margin-right: auto;" onclick="selectetInfo(this.id)" id="info1"></td>
-          <th><label for="smoking">Smoking</label></th>
+          <th><label for="smoking">Fajčenie</label></th>
           <td><input type="checkbox" name="vehicle" value="Bike" id="smoking"><br></td>
         </tr>
         <tr>
           <td><img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/information.png" alt="information" style="height: 25px; width: 25px; margin-left: auto; margin-right: auto;" onclick="selectetInfo(this.id)" id="info2"></td>
-          <th><label for="alone">Alone</label></th>
+          <th><label for="alone">Osamote</label></th>
           <td><input type="checkbox" name="vehicle" value="Car" id="alone"><br></td>
         </tr>
         <tr>
           <td><img class="food_picture1 img-responsive" src="<?= base_url()?>assets/images/information.png" alt="information" style="height: 25px; width: 25px; margin-left: auto; margin-right: auto;" onclick="selectetInfo(this.id)" id="info3"></td>
-          <th><label for="window">Window</label></th>
+          <th><label for="window">Okno</label></th>
           <td><input type="checkbox" name="vehicle" value="Bike" id="window"><br></td>
         </tr>
      </table>
@@ -536,7 +536,7 @@ $(function(){
 
 <div class="reservation_page" id="page_4" style="display: none;">
   <div style="width: 70%" id="haha">
-  	<h2 id="h23"> Name</h2>
+  	<h2 id="h23"> Meno</h2>
     <input style="max-width:100%; width:100%; " type="text" class="form-control" id="name">
   </div>
 </div>
@@ -546,26 +546,26 @@ $(function(){
 
 <div class="reservation_page" id="page_5" style="display: none;">
 	<div class="wrapperino">
-  <h2 style="text-align:center;" id="h25">Summary</h2>
+  <h2 style="text-align:center;" id="h25">Rekapitulácia</h2>
     <table class="w3-table w3-striped w3-bordered">
         <tr>
-          <th>Name</th>
+          <th>Meno</th>
           <td><label id="name2"></label></td>
         </tr>
         <tr>
-          <th>Date</th>
+          <th>Dátum</th>
           <td><label id="date2"></label></td>
         </tr>
         <tr>
-          <th>Time</th>
+          <th>Čas</th>
           <td><label id="time2"></label></td>
         </tr>
         <tr>
-          <th>Persons</th>
+          <th>Počet osôb</th>
           <td><label id="number2"></label></td>
         </tr>
         <tr>
-          <th>Additional options</th>
+          <th>Doplňujúce požiadavky</th>
           <td><label id="addOpt2"></label></td>
         </tr>
      </table>
@@ -578,7 +578,7 @@ $(function(){
 
   <div class="round-div button button-nav box" onclick="goBack();" id="back" style="visibility : hidden;">  
       <span style="display: block;">
-          Back
+          Späť
       </span>
   </div>
   
@@ -590,7 +590,7 @@ $(function(){
 
   <div class="round-div button right button-nav box" onclick="goNext();" id="next">
       <span style="display: block;">
-          Next
+          Ďalej
       </span>
   </div>
 
