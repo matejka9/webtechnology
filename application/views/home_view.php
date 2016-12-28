@@ -32,7 +32,7 @@ $(function(){
     <figure class='centerer space'>
   	 <img class="centerer food_picture img-responsive" src="<?= base_url()?>assets/images/businessman.jpg" alt="podnikatel">
      <figcaption class='centerer'>
-        Zákaznik: Podnikateľ Jožo
+        Zákazník: Podnikateľ Jožo
       </figcaption>
     </figure>
     <p class='space'>
@@ -47,7 +47,7 @@ $(function(){
     <figure class='centerer space'>
       <img class="centerer food_picture img-responsive" src="<?= base_url()?>assets/images/vegangirl.jpg" alt="veganka">
       <figcaption class='centerer'>
-        Zákaznik: Vegánka Janka
+        Zákazník: Vegánka Janka
       </figcaption>
     </figure>
     <p class='space'>
