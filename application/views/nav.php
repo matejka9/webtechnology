@@ -12,6 +12,7 @@
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
         <li><?= anchor('home','Home', 'id="home" class="active"') ?></li>
+        <li><?= anchor('about','About us', 'id="about"') ?></li>
         <li><?= anchor('menu','Daily menu', 'id="menu"') ?></li>
         <li><?= anchor('reservation','Reservation', 'id="reservation"') ?></li>
         <li><?= anchor('contact','Contact', 'id="contact"') ?></li>

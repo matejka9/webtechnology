@@ -117,3 +117,18 @@ footer{
 ***EACH****
 ***OTHER***
 ***********/
+
+
+.content {
+    max-width:520px; 
+    width:100%;
+}
+
+#gmap_canvas {
+    height:400px;
+    width:520px;
+}
+
+.style_hidden {
+    overflow: hidden;
+}

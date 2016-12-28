@@ -1,6 +1,13 @@
-.food_picture1{
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+.centerer {
+    margin: auto;
+    display: block;
+}
+
+.food_picture{
+    max-width:300px;
+    height:100%; 
+    width:100%; 
+    padding-right:25px; 
 }
 
 .home_page{

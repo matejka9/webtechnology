@@ -36,28 +36,6 @@ $(window).resize(function(){
     }
 });
 
-//     var w = window.innerWidth;
-// 	var small_w = $("#contactText").width();
-
-// 	//console.log(w);
-// 	//console.log(small_w);
-
-// 	var leftMargin = (w - small_w) / 2;
-// 	$("#contactText").css("position","absolute" );
-// 	$("#contactText").css("left",leftMargin );
-// 	$("#contactText").css("top","20%" );
-
-// 	var rect = $("#contactText").getBoundingClientRect();
-
-// 	$("#mapaGoogle").css("position","absolute" );
-// 	$("#mapaGoogle").css("left", "10px");
-
-
-// 	$("#mapaGoogle").css("top", rect.bottom);
-
-
-// });
-
 
 
 $(function(){
@@ -67,14 +45,14 @@ $(function(){
 </script>
 
 
-
-<h1>Contact page</h1>
+<section>
+<h1>Contact</h1>
 
 <script src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCCObpQl1lf3xSirBupKY_6tXuBrTz1r0w'></script>
 <div class="contact_page">
-    <div class="first" style="max-width:520px; width:100%;">
+    <div class="first content">
 		<div id="contactText" >
-			<h3>Restaurant Tutorial</h3>
+			<h3>Restaurant Tutorial 3 2016</h3>
 			<table class="w3-table w3-striped w3-bordered">
 		        <tr>
 		          <th>Location</th>
@@ -100,13 +78,14 @@ $(function(){
 		</div>
 		<br>
 		<div class= "second" id="mapaGoogle">
-			<div style='overflow:hidden;'>
-				<div id='gmap_canvas' style='height:400px;width:520px;'></div>
+			<div class='style_hidden'>
+				<div id='gmap_canvas'></div>
 				<style>#gmap_canvas img{max-width:none!important;background:none!important}</style>
 			</div> <a href='http://maps-website.com/'>www.Maps-website.com</a> 
 		</div>
 	</div>
 </div>
+</section>
 
 <script type='text/javascript' src='https://embedmaps.com/google-maps-authorization/script.js?id=4c65c7bd8843a7a7357017fa4a4a65fb8506dd59'></script>
 <script type='text/javascript'>

@@ -10,8 +10,8 @@ $(function(){
 });
 </script>
 
-
-<h1>menu page</h1>
+<section>
+<h1>Daily Menu</h1>
 
 <div class="wrapperino menu_page">
 <div>
@@ -23,139 +23,145 @@ $(function(){
         </tr>
         
         <tr class="monday">
-          <th>Monday</th>
-          <td>	Kuracie prsia „BALZAMICO" grilované prsia, bazalka, rucola, lolo biondo šalát, olivy, balzamicový krém</td>
-          <td> 8 eur</td>
+            <th>Monday</th>
+            <td>Šampiňónová krémová polievka</td>
+            <td></td>
         </tr>
           
         <tr>
             <td></td>
-            <td>JEDLO2</td>
-            <td></td>
+            <td>Bravčová krkovička s varenými zemiakmi a restovanou cibuľkou</td>
+            <td>4 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO3</td>
-            <td></td>
+            <td>Pizza tyčinky plnené vegánskym syrom + dresing</td>
+            <td>3 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO4</td>
-            <td></td>
+            <td>Bryndzové halušky so slaninkou</td>
+            <td>5 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>POLIEVKA</td>
-            <td></td>
+            <td>    Kuracie prsia „BALZAMICO" grilované prsia, bazalka, rucola, lolo biondo šalát, olivy, balzamicový krém</td>
+            <td> 6 &euro;</td>
         </tr>
 
         <tr class="tuesday">
           <th>Tuesday</th>
-          <td>JEDLO1</td>
-          <td></td>
+          <td>Fazuľová polievka na kyslo</td>
+            <td></td>
         </tr>
           
         <tr>
             <td></td>
-            <td>JEDLO2</td>
-            <td></td>
+            <td>Pizza Slaninová s feferónmi a kukuricou</td>
+            <td>4 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO3</td>
-            <td></td>
+            <td>Bryndzové halušky so slaninkou(vegánska bryndza a slanina z kokosovim základom)</td>
+            <td>5 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO4</td>
-            <td></td>
+            <td>Spaghetti s listovým špenátom,šampiňónmi,cesnakom,smotanou a mozzarelou</td>
+            <td>4 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>POLIEVKA</td>
-            <td></td>
+            <td>Kuracie soté s kari omáčkou a dusenou ryžou, zeleninová obloha</td>
+             <td></td>
+            
         </tr>
 
         <tr class="wednesday">
           <th>Wednesday</th>
-          <td>JEDLO1</td>
-          <td></td>
+          <td>Cesnaková polievka</td>
+            <td></td>
         </tr>
           
         <tr>
             <td></td>
-            <td>JEDLO2</td>
-            <td></td>
+            <td>Zeleninové rizoto s parmezánom</td>
+            <td>5 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO3</td>
-            <td></td>
+            <td>Pizza šunková s kukuricou</td>
+            <td>4 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO4</td>
-            <td></td>
+            <td>Cícerové cestoviny so zeleninou</td>
+            <td>6 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>POLIEVKA</td>
-            <td></td>
+            <td>Gordon Bleu,ryža s hráškom</td>
+          <td>5 &euro;</td>
+            
         </tr>
 
         <tr class="thursday">
           <th>Thursday</th>
-          <td>JEDLO1</td>
-          <td></td>
+          <td>Hokkaido polievka</td>
+            <td></td>
         </tr>
           
         <tr>
             <td></td>
-            <td>JEDLO2</td>
-            <td></td>
+            <td>Vyprážaný kurací rezeň s ryžou</td>
+            <td>4 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO3</td>
-            <td></td>
+            <td>Parené buchty s grankom, maslom a cukrom</td>
+            <td>4 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO4</td>
-            <td></td>
+            <td>Jarné rolky</td>
+            <td>6 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>POLIEVKA</td>
-            <td></td>
+            <td>Bravčová cigánska s opečenými zemiakmi</td>
+          <td>5 &euro;</td>
+            
         </tr>
 
         <tr class="friday">
           <th>Friday</th>
-          <td>JEDLO1</td>
-          <td></td>
+          <td>Tekvicová polievka</td>
+            <td></td>
         </tr>
           
         <tr>
             <td></td>
-            <td>JEDLO2</td>
-            <td></td>
+            <td>Bravčová panenka na grile, dubáková omáčka, viedenský knedlík</td>
+            <td>4 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO3</td>
-            <td></td>
+            <td>Pffersteak z hovädzej roštenky , zemiakové krokety</td>
+            <td>4 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>JEDLO4</td>
-            <td></td>
+            <td>Knedlík, kapusta, restovaná cibuľka</td>
+            <td>3 &euro;</td>
         </tr>
         <tr>
             <td></td>
-            <td>POLIEVKA</td>
-            <td></td>
+            <td>Bravčový steak s volským okom a hranolkami</td>
+          <td>4 &euro;</td>
+            
         </tr>
      </table>
      </div>
   </div>
+
+</section>
