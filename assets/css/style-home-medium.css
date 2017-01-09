@@ -21,7 +21,7 @@
     padding: 5px;
     background-color: #000000;
     width: 9%;
-    min-width: 75px;
+    min-width: 125px;
     height: 31px;
     background-color: #fff;
     text-align: center;
@@ -45,7 +45,11 @@
 }
 
 .left_space {
-    margin-left: 20px;
+    margin-left: auto;
+}
+
+.right_space {
+    margin-right: auto;
 }
 
 .bottom_space {

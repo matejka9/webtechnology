@@ -1,5 +1,6 @@
 .centerer {
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     display: block;
     text-align: center;
 }
@@ -46,7 +47,11 @@
 }
 
 .left_space {
-    margin-left: 20px;
+    margin-left: auto;
+}
+
+.right_space {
+    margin-right: auto;
 }
 
 .bottom_space {

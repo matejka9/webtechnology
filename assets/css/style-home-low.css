@@ -46,7 +46,11 @@
 }
 
 .left_space {
-    margin-left: 20px;
+    margin-left: auto;
+}
+
+.right_space {
+    margin-right: auto;
 }
 
 .bottom_space {

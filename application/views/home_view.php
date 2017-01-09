@@ -28,7 +28,7 @@ $(function(){
 <article class="home_article">
   <p>Tešíme sa na Vašu návštevu. Naše sídlo nájdete v záložke <a href="index.php/contact" class='link_kontakt'>Kontakt</a> v nasledujúcich hodinách:</p>
 
-  <table class='left_space bottom_space'>
+  <table class='left_space bottom_space right_space'>
     <tr>
       <th>Po:</th>
       <td>&nbsp;11:00 - 15:00</td>

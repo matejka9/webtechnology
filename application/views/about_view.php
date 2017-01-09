@@ -50,7 +50,7 @@
   
   <section>
     <figure class='centerer space'>
-  	 <img class="centerer food_picture img-responsive" src="<?= base_url()?>assets/images/businessman.jpg" alt="podnikatel">
+  	 <img class="centerer" src="<?= base_url()?>assets/images/businessman.jpg" alt="podnikatel">
      <figcaption class='centerer'>
         Zákazník: Podnikateľ Jožo
       </figcaption>
@@ -65,7 +65,7 @@
 
   <section>
     <figure class='centerer space'>
-      <img class="centerer food_picture img-responsive" src="<?= base_url()?>assets/images/vegangirl.jpg" alt="veganka">
+      <img class="centerer" src="<?= base_url()?>assets/images/vegangirl.jpg" alt="veganka">
       <figcaption class='centerer'>
         Zákazník: Vegánka Janka
       </figcaption>
